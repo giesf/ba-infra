@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.5
+  name: claude-code-job-v1.6
   namespace: default
 spec:
   template:
@@ -13,6 +13,7 @@ spec:
         supplementalGroups: [4000]
       containers:
       - name: claude-code
+        workingDir: /tmp
         image: ghcr.io/zeeno-atl/claude-code:latest
         env:
         - name: ANTHROPIC_API_KEY
