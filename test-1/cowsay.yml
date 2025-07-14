@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: claude-code
-        image: ghcr.io/Zeeno-atl/claude-code:latest
+        image: ghcr.io/zeeno-atl/claude-code:latest
         env:
         - name: ANTHROPIC_API_KEY
           valueFrom:
