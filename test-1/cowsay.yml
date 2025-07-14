@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: whalesay
-        image: docker/whalesay
+        image: rancher/cowsay
         command: ["cowsay",  "This is a Kubernetes Job!"]
       restartPolicy: Never
   backoffLimit: 4
