@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.6
+  name: claude-code-job-v1.7
   namespace: default
 spec:
   template:
