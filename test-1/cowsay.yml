@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.10
+  name: claude-code-job-v1.11
   namespace: default
 spec:
   template:
@@ -31,7 +31,7 @@ spec:
             mkdir code-example
             cd code-example
             echo "console.log('Hello, World')" > index.ts;
-            bunx  @anthropic-ai/claude-code --dangerously-skip-permissions -p "Make a basic web server that serves a simple greeter"
+            bunx  @anthropic-ai/claude-code --dangerously-skip-permissions -p "Make a basic web server that serves a simple greeter with bun.js in index.ts"
             cat index.ts
       restartPolicy: Never
   backoffLimit: 1
