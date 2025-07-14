@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.11
+  name: claude-code-job-v1.12
   namespace: default
 spec:
   template:
@@ -14,7 +14,7 @@ spec:
       containers:
       - name: claude-code
         workingDir: /tmp
-        image: oven/bun
+        image: oven/bun:debian
         env:
         - name: CONTAINER_USER_ID
           value: "1000"
