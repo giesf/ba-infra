@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: cowsay-v1
+  name: cowsay-v1-1
   namespace: default
 spec:
   template:
     spec:
-      parallelism: 5
-      completions: 5
+      completions: 10
+      parallelism: 3
       containers:
       - name: cowsay
         image: rancher/cowsay
