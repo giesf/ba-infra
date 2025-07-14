@@ -1,9 +1,11 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.12
+  name: claude-code-job-v1.13
   namespace: default
 spec:
+  parallelism: 10
+  completions: 100
   template:
     spec:
       securityContext:
