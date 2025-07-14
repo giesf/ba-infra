@@ -4,10 +4,10 @@ metadata:
   name: cowsay-v1-1
   namespace: default
 spec:
+  completions: 10
+  parallelism: 3
   template:
     spec:
-      completions: 10
-      parallelism: 3
       containers:
       - name: cowsay
         image: rancher/cowsay
