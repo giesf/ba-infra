@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.1
+  name: claude-code-job-v1.2
   namespace: default
 spec:
   template:
@@ -21,7 +21,7 @@ spec:
             mkdir code-example
             cd code-example
             echo "console.log('Hello, World')" > index.ts;
-            npx  @anthropic-ai/claude-code -p "Make a basic web server that serves a simple greeter"
+            npx  @anthropic-ai/claude-code -dangerously-skip-permissions -p "Make a basic web server that serves a simple greeter"
             cat index.ts
       restartPolicy: Never
   backoffLimit: 1
