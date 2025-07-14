@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: cowsay-v1-1
+  name: cowsay-v1-2
   namespace: default
 spec:
   completions: 10
