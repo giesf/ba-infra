@@ -1,13 +1,15 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: whalesay
+  name: cowsay-v1
   namespace: default
 spec:
   template:
     spec:
+      parallelism: 5
+      completions: 5
       containers:
-      - name: whalesay
+      - name: cowsay
         image: rancher/cowsay
         command: ["cowsay",  "This is a Kubernetes Job!"]
       restartPolicy: Never
