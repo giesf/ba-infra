@@ -16,6 +16,10 @@ spec:
         workingDir: /tmp
         image: ghcr.io/zeeno-atl/claude-code:latest
         env:
+        - name: CONTAINER_USER_ID
+          value: 1000
+        - name: CONTAINER_GROUP_ID
+          value: 3000
         - name: ANTHROPIC_API_KEY
           valueFrom:
             secretKeyRef:
