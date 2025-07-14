@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: claude-code-job-v1.8
+  name: claude-code-job-v1.9
   namespace: default
 spec:
   template:
@@ -9,7 +9,7 @@ spec:
       securityContext:
         runAsUser: 1000
         runAsGroup: 3000
-        fsGroup: 2000
+        fsGroup: 3000
         supplementalGroups: [4000]
       containers:
       - name: claude-code
